@@ -1,5 +1,7 @@
 package database;
 
+import com.qianxinyao.analysis.jieba.keyword.Keyword;
+
 import java.util.List;
 
 public class database{
@@ -35,6 +37,23 @@ public class database{
                                     {0.4,0.5,0.4}   };
 
         return new query_result(doc_ids, doc_weights);
+    }
+
+    public void write_index(List<Keyword> seg_texts, String type, long id){
+        /*
+        input:  List<Keyword>   seg_text:   [word1, word2, ...]
+                String          type:       "Activities", "Articles", "Accounts"
+                long            id:         doc(Activity or Article or Account) id
+         */
+
+        for (Keyword word: seg_texts){
+            System.out.println(word.getName()+":\t"+word.getTfidfvalue()+"\t"+type+"\t"+id);
+            /*
+            to do, write into {type} database, keyword: word.getName(),
+                                               doc_id:  id
+                                               doc_weight: word.getTfidfvalue()
+             */
+        }
     }
 
 
