@@ -1,3 +1,4 @@
+package fdu.ddj.backend.search;
 import database.database;
 import search_index.search_index;
 

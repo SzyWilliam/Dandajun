@@ -26,6 +26,21 @@ public class Activity {
     private Timestamp updateTime;
 
     public Activity() {}
+    public Activity(String name, String intro, String tag, String due, String time, String location,
+                    String title, String url, String content, Date endTime, Timestamp updateTime
+    ){
+        this.name = name;
+        this.intro = intro;
+        this.tag = tag;
+        this.due = due;
+        this.time = time;
+        this.location = location;
+        this.title = title;
+        this.url = url;
+        this.content = content;
+        this.endTime = endTime;
+        this.updateTime = updateTime;
+    }
 
     public Long getID() {
         return ID;

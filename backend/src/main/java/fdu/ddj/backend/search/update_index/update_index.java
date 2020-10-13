@@ -1,4 +1,4 @@
-package update_index;
+package fdu.ddj.backend.search.update_index;
 
 import com.qianxinyao.analysis.jieba.keyword.Keyword;
 import database.database;

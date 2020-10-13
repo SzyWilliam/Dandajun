@@ -25,7 +25,18 @@ public class Article {
 
     public Article() {}
 
-
+    public Article(String name, String tag, String intro, String title, String url,
+                   Date endTime, String content, Timestamp updateTime
+    ){
+        this.name = name;
+        this.tag = tag;
+        this.intro = intro;
+        this.title = title;
+        this.url = url;
+        this.endTime = endTime;
+        this.content = content;
+        this.updateTime = updateTime;
+    }
 
     public Long getID() {
         return ID;

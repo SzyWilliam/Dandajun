@@ -1,4 +1,4 @@
-package database;
+package fdu.ddj.backend.search.database;
 
 import java.util.List;
 
