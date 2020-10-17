@@ -1,6 +1,8 @@
 package fdu.ddj.backend.search;
-import database.database;
-import search_index.search_index;
+
+
+
+import fdu.ddj.backend.search.search_index.search_index;
 
 import java.util.List;
 

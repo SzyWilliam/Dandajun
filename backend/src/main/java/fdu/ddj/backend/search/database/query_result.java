@@ -1,4 +1,4 @@
-package database;
+package fdu.ddj.backend.search.database;
 
 // return doc_ids and doc_weights
 public class query_result {

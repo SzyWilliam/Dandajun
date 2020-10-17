@@ -1,8 +1,9 @@
 package fdu.ddj.backend.search.update_index;
 
+
 import com.qianxinyao.analysis.jieba.keyword.Keyword;
-import database.database;
-import segment.segment;
+import fdu.ddj.backend.search.database.database;
+import fdu.ddj.backend.search.segment.segment;
 
 import java.util.HashMap;
 import java.util.List;

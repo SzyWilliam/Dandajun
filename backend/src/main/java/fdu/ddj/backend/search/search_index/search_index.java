@@ -1,8 +1,10 @@
-package search_index;
+package fdu.ddj.backend.search.search_index;
 
-import database.database;
-import segment.segment;
-import database.query_result;
+
+import fdu.ddj.backend.search.database.database;
+import fdu.ddj.backend.search.database.query_result;
+import fdu.ddj.backend.search.segment.segment;
+
 import java.util.*;
 
 public class search_index{

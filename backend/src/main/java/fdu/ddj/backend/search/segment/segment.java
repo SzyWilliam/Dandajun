@@ -1,4 +1,4 @@
-package segment;
+package fdu.ddj.backend.search.segment;
 
 import com.huaban.analysis.jieba.JiebaSegmenter;
 import com.qianxinyao.analysis.jieba.keyword.*;
