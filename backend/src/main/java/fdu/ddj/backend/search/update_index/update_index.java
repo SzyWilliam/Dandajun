@@ -2,6 +2,7 @@ package fdu.ddj.backend.search.update_index;
 
 
 import com.qianxinyao.analysis.jieba.keyword.Keyword;
+import fdu.ddj.backend.repository.KeywordRepository;
 import fdu.ddj.backend.search.database.database;
 import fdu.ddj.backend.search.segment.segment;
 
@@ -14,9 +15,9 @@ public class update_index{
     segment seg;
 
     // class initialization
-    public update_index(){
+    public update_index(KeywordRepository keywordRepository){
         this.seg = new segment();       // for text segmentation
-        this.db = new database();       // for database
+        this.db = new database(keywordRepository);       // for database
     }
 
     public void add_article(String text, String type, long id) {

@@ -5,19 +5,23 @@ import fdu.ddj.backend.repository.ActivityRepository;
 import fdu.ddj.backend.repository.ArticleRepository;
 import fdu.ddj.backend.repository.KeywordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class database{
-    @Autowired
+
+
     private KeywordRepository keywordRepository;
 
-    public database(){
+    public database(KeywordRepository keywordRepository){
         /*
         to do, initialize database
         */
-
+        this.keywordRepository = keywordRepository;
     }
 
     public List<fdu.ddj.backend.domain.Keyword> query_keywords(List<String> keywords){
@@ -59,6 +63,13 @@ public class database{
                                                doc_id:  id
                                                doc_weight: word.getTfidfvalue()
              */
+            fdu.ddj.backend.domain.Keyword keyword = new fdu.ddj.backend.domain.Keyword(
+                    word.getName(),
+                    (Long) id,
+                    word.getTfidfvalue(),
+                    type
+            );
+            keywordRepository.save(keyword);
         }
     }
 

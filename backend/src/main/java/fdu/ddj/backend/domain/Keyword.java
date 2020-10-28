@@ -8,21 +8,26 @@ import java.security.Key;
 
 @Entity
 public class Keyword {
+    public static String ACTIVITY = "ACT";
+    public static String ACCOUNT = "ACC";
+    public static String ARTICLE = "ART";
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ID;
 
     private String key;
-    private Long DocID;
+    private String source;
+    private Long docID;
     private Double weight;
 
     public Keyword() {}
 
-    public Keyword(String key, Long docID, Double weight){
+    public Keyword(String key, Long docID, Double weight, String source){
         this.key = key;
-        this.DocID = docID;
+        this.docID = docID;
         this.weight = weight;
+        this.source = source;
     }
 
     public Double getWeight() {
@@ -33,13 +38,6 @@ public class Keyword {
         this.weight = weight;
     }
 
-    public Long getDocID() {
-        return DocID;
-    }
-
-    public void setID(Long ID) {
-        this.ID = ID;
-    }
 
     public String getKey() {
         return key;
@@ -53,7 +51,20 @@ public class Keyword {
         return ID;
     }
 
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public Long getDocID() {
+        return docID;
+    }
+
     public void setDocID(Long docID) {
-        DocID = docID;
+        this.docID = docID;
     }
 }
