@@ -2,7 +2,7 @@
     <v-container>
         <v-btn
         id="app"
-        color="light-blue lighten-5"
+        class="primary"
         v-on:click="defaultValue += 1"
         >Button</v-btn>
         <markdown-editor
